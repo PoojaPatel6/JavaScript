@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling in JS</title>
+</head>
+<body>
+    
+
+
+
+
+<script>
+
+    // abcdh
+// try{
+//     console.log('Start of try');
+//     //    ghefjdsjf;
+//        fun();
+//        console.log('end of try');
+
+//     // }catch{
+//     //     console.log("Error Has Occured");
+//     // }
+// }catch(error){
+
+//     console.log(error);
+//   }
+
+//   try catch method syncronouly work krta h
+
+//   try{
+//     setTimeout(function(){    // this is scheduled
+//         abcddd;
+
+//     }, 1000)
+//   }catch(error){
+
+//   }
+
+
+
+// setTimeout(function(){
+//     try{
+//         jhgjhdkjsh;
+//     }catch(error){
+//         console.log("Error has Occured");
+//     }
+// }, 1000);
+
+
+
+
+// different types of error in js(EvalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError,AggregateError)
+
+// try{
+//         jhgjhdkjsh;
+
+//     }catch(error){
+        // console.log(error.name);
+        // console.log(error.message);
+        // console.log(error.stack);
+
+
+    //     if(error instanceof ReferenceError){
+    //         console.log('ReferenceError');
+    //     }else if(error instanceof TypeError){
+    //         console.log('TypeError');
+    //     }else{
+    //         console.log('Unknown Error');
+    //     }
+    // }
+
+
+    try{
+        // let json = '{"name": "Pooja", "age": 24}';
+        let json = '{ "age": 24}';
+        let user = JSON.parse(json);
+
+
+        if(!user.name){
+            throw new Error("Incomplete data: no name" );
+        }
+        console.log(user.name);
+        console.log(user.age);
+    }catch(error){
+        console.log(error);
+    }finally{
+        console.log('Finally Run');
+
+    }
+
+
+
+</script>
+</body>
+</html>
